@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+main{
+    max-width: 1500px;
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-start; /* Align the cards to the top of the container */
+    margin: auto;
+}
+
+main .card{
+    width: calc(33.33% - 40px); /* Adjust the width to fit three cards per row */
+    max-width: 300px;
+    flex: 1 0 33.33%;
+    text-align: center;
+    height: 800px;
+    border: 1px solid lightgrey !important;
+    margin: 20px;
+}
+
+main .card .image{
+   height: 50%;
+   margin-bottom: 20px;
+}
+
+main .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+main .card .caption p{
+   padding: 3px;
+ }
+
+main .card a{
+    width: 50%;
+}
+
+main .card button{
+    border: 2px solid black;
+    padding: 0.5em;
+    width: 80%;
+    cursor: pointer;
+    margin-top: 1em;
+    font-weight: bold;
+    position: relative;
+    margin-left: 60%;
+    margin-bottom: 10px;
+}
+
+main .card button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .5s;
+    margin: 0;
+}
+
+main .card button:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .5s;
+}
+
+main .card button:hover::before{
+    width: 8%;
+
+}
+
+main .card button:hover::after{
+    width: 8%;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}

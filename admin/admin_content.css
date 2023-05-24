@@ -1,0 +1,206 @@
+
+
+body {
+  font-family: Arial, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("https://cdn.wallpapersafari.com/58/93/8eKYud.jpg") !important; */
+  background-color: rgb(141, 173, 233) !important;
+}
+
+.admin{
+  width: 100px;
+  height: 100px;
+}
+
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  text-align: center;
+  transition: 0.5s;
+  width: 0;
+  z-index: 1;
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.openbtn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.openbtn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.closebtn {
+  color: #fff;
+  font-size: 36px;
+  margin-left: 50px;
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+.closebtn:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.logout{
+ margin-top: 45%;
+}
+
+  /* .header
+  {
+    line-height: 70px;
+    padding-left: 30px;	
+    margin-top: 30px;
+    margin-left: 30%;
+    text-transform: uppercase;
+  } */
+
+.container {
+  padding: 10px;
+  width: 50% !important;
+  max-height: fit-content;
+  background-color: white;
+  /* margin-right: 15% !important; */
+  border-radius: 10px;
+  border: 5px double black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for small screens */
+  .container {
+    border: none;
+    padding: 10px;
+  }
+}
+
+.mb-4{
+  margin-left: 5%;
+  margin-top: 5%;
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.head_view
+{
+	margin-left: 20%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+.head_view h2
+{
+	font-family: poppins, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table-head-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+table {
+  background-color: white;
+  margin-right: 5% !important;
+}
+
+.form_delete{
+	margin-left: 30% !important;
+	margin-top: 10% !important;
+	border: 10px double black;
+	padding: 20px;
+	margin-right: 30%;
+	border-radius: 20px;
+  background-color: #fff;
+}
+
+.container1 {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 5%;
+}
+
+.card {
+  margin-bottom: 20px;
+  width: 200px;
+  border: 5px double black !important;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.card-branches {
+  background-color: #F9D6A6 !important;
+}
+
+.card-courses {
+  background-color: #ecee8d !important;
+}
+
+.card-scholarships {
+  background-color: #A6F9B6 !important;
+}
+
+.card-advisors {
+  background-color: #F9A6A6 !important;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
