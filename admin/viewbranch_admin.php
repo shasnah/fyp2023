@@ -63,7 +63,7 @@
 <?php
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
       
 //Retrieve data based on branches
 $q = "SELECT branches.branch_id, branches.branch_image, branches.branch_fname, branches.branch_abbre, branches.branch_field, branches.branch_address, branches.branch_phone FROM branches";

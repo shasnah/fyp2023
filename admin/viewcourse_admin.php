@@ -62,7 +62,7 @@
 <?php
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
       
 //Retrieve data based on branches
 $q = "SELECT courses.course_id, courses.course_level, courses.course_name, courses.course_descript, courses.course_special, courses.course_entry, branches.branch_abbre

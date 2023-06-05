@@ -3,26 +3,22 @@
 require('mysqli_connect.php');
 include("student_auth.php");
 
+$id = $_SESSION['username']; 
+    
+$query = "SELECT * FROM student WHERE username = '$id'";
+$row = mysqli_query($dbc, $query);
+$show = mysqli_fetch_assoc($row);
+$student_id = $show["student_id"]; // Get the student ID
 
-// Retrieve student data from the database
-$sql = "SELECT * FROM student";
-$result = mysqli_query($dbc, $sql);
-
-
-// Check if the query executed successfully
-if ($result) {
-    // Fetch the student data
-    $row = mysqli_fetch_assoc($result);
-
+if ($row) {
     // Assign the values to variables
-    $student_id = $row['student_id']; 
-    $f_name = $row['f_name'];
-    $l_name = $row['l_name'];
-    $email = $row['email'];
-    $username = $row['username'];
+    $f_name = $show['f_name'];
+    $l_name = $show['l_name'];
+    $email = $show['email'];
+    $username = $show['username'];
 
     // Free the result set
-    mysqli_free_result($result);
+    mysqli_free_result($row);
 } else {
     // Display an error message or handle the error in an appropriate way:
     echo "Error executing the query: " . mysqli_error($dbc);
@@ -35,7 +31,7 @@ mysqli_close($dbc);
 <html>
 <head>
     <meta charset="utf=8">
-    <title> Welcome </title>
+    <title> Student </title>
 
      <!-- Link fo css file -->
     <link rel="stylesheet" href="student_content.css" /> 
@@ -58,34 +54,34 @@ mysqli_close($dbc);
             <span class="navbar-toggler-icon"></span>
             </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="student_homepage.php">Home</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="student_profile.php">Profile</a>
+                        <a class="nav-link" aria-current="page" href="student_viewprofile.php">Profile</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">News & Events</a>
+                        <a class="nav-link" aria-current="page" href="viewnews_student.php">News & Events</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">UniKL Branches</a>
+                        <a class="nav-link" aria-current="page" href="viewbranch_student.php">UniKL Branches</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">Scholarship</a>
+                        <a class="nav-link" aria-current="page" href="viewscholar_student.php">Scholarship</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">Academic Advisor</a>
+                        <a class="nav-link" aria-current="page" href="viewadvisor_student.php">Academic Advisor</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="student_logout.php">Logout</a>
+                        <a class="nav-link" aria-current="page" href="student_logout.php">Logout</a>
                         </li>
                     </ul>
 
@@ -100,11 +96,13 @@ mysqli_close($dbc);
 
 
 <div class="container mt-4">
-    <h2 class="mb-4">Profile</h2>
+    <h2 class="mb-4">Student Profile</h2>
 
     <div class="row">
         <div class="col-md-6 mx-auto">
             <form name="student view profile" action="" method="post">
+
+            <img class="student" src="../student/media/student.png" alt="Student Image">
 
 
             <div class="form-group">

@@ -52,6 +52,7 @@
 <?php
 
 require('mysqli_connect.php');
+include("admin_auth.php");
 
   $totalBranches = 0;
   $totalCourses = 0;

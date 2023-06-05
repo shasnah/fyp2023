@@ -3,7 +3,7 @@
 <?php 
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
 
 // Retrieve branch data from the database
 $query = "SELECT branch_id, branch_abbre FROM branches";

@@ -2,7 +2,7 @@
 <?php 
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // user is requesting the page with a GET request, initialize form fields

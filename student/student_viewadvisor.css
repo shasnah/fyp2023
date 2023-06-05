@@ -6,37 +6,82 @@
     color: black;
 }
 
-main {
+.header h2 {
+    color: #333;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold !important;
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+  }
+  
+.header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  main {
     max-width: 1200px;
     width: 95%;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-main .card {
+  }
+  
+  main .card {
     width: calc(20% - 20px);
     height: 200px;
     border: 5px double lightgrey;
     margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-main .card .caption {
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  main .card .caption {
     text-align: center;
     padding: 10px;
-}
-
-main .card .caption p {
+  }
+  
+  main .card .caption p {
     padding: 5px;
-}
+    margin: 0;
+  }
+  
+  main .card .advisor_fname {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  main .card .advisor_lname {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  main .card .advisor_depart {
+    font-size: 16px;
+  }
+  
+  main .card .advisor_email {
+    font-size: 14px;
+    color: #555555;
+  }  
 
 footer {
-    display: flex;
+    background-color: #e7eaec;
+    padding: 10px;
+    font-size: 15px;
+    color: #888;
+    display: flex !;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: auto;
-}
+  }

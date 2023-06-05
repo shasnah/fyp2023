@@ -2,7 +2,7 @@
 <?php 
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
 
 // Check for form submission:
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {

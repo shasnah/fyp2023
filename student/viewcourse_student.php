@@ -1,8 +1,4 @@
 
-<?php 
-// include this file on all secure pages
-include("student_auth.php");
-?> 
 
 <!DOCTYPE html>
 <html>
@@ -11,7 +7,7 @@ include("student_auth.php");
     <title> Student </title>
 
      <!-- Link fo css file -->
-    <link rel="stylesheet" href="student_content.css" /> 
+    <link rel="stylesheet" href="student_viewcourse.css" /> 
 
     <!-- Link for bootstrap file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -31,7 +27,7 @@ include("student_auth.php");
             <span class="navbar-toggler-icon"></span>
             </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="student_homepage.php">Home</a>
@@ -71,32 +67,56 @@ include("student_auth.php");
     </nav>
 <!-- End of navigation menu -->
 
+
 <header class="header">
 
-<img src="https://www.msi.unikl.edu.my/images/uniklmsi/news/IMG_0309.jpg" alt="logo" style="width:1350px;height:500px;"> 
+<h2> UniKL Courses</h2>
 
-<h2> UniKL Course Recommedation System </h2>
-
-<p> This website is provided for specially for SPM students to discover diploma and foundation courses provided in UniKL. Students can use their SPM results to know what course suits with their exam result. </p>
+<p> This page offers comprehensive information about the courses offered at each UniKL branch. For any further inquiries, kindly reach out to the respective UniKL branch directly. </p>
 
 </header>
 
-<div class= "cover">
-<div class="box">
-    <img src="https://media.licdn.com/dms/image/C5612AQF-xPyqmS8ExQ/article-cover_image-shrink_720_1280/0/1635523156416?e=2147483647&v=beta&t=oBh_cqQfEMB5BRVQ5HzBwhdtVrsLSmIEYvsB9yvjEyc">
-    <h3> Course Recommendation </h3>
-    <p> Use your SPM result and find out course that suits with your result</p>
-    <a href="recommendcourse_student.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here</a>
-</div>
+<?php
 
-<div class="box">
-    <img src="https://www.transformationmarketing.com/wp-content/uploads/2019/12/TM-Different-Personality-tests-and-how-it-can-help-your-team.jpg">
-    <h3> RIASEC Test </h3>
-    <p> Find out your career path by answering few questions </p>
-    <a href="testcourse_student.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here</a>
-</div>
-</div>
+require('mysqli_connect.php');
+include("student_auth.php");
 
+$branch_id = $_GET['branch_id'];
+
+// Retrieve branches data from the database
+$sql = "SELECT courses.course_id, courses.course_level, courses.course_name, courses.course_descript, courses.course_special, courses.course_entry, branches.branch_abbre
+FROM courses
+INNER JOIN branches ON courses.branch_id = branches.branch_id
+WHERE courses.branch_id = $branch_id";
+$result = mysqli_query($dbc, $sql);
+
+?>
+
+<main>
+<?php
+    while ($row = mysqli_fetch_assoc($result)) {
+        $course_id = $row['course_id'];
+    ?>    
+    <div class="card">
+       
+
+        <div class="caption">
+            <p class="branch_abbre"> <?php echo $row["branch_abbre"];     ?> </p>
+            <p class="course_level"> <?php echo $row["course_level"];     ?> </p>
+            <p class="course_name"> <?php echo $row["course_name"];     ?> </p>
+            <p class="course_descript"> <?php echo $row["course_descript"]; ?> </p>
+            <p class="course_special"> <?php echo $row["course_special"];     ?> </p>
+            <p class="course_entry"> <?php echo $row["course_entry"];     ?> </p>
+        </div>
+
+        
+    </div>
+
+    <?php
+        }
+    ?>
+
+</main>
 
 
 <footer class="text-center py-3">
@@ -105,6 +125,3 @@ include("student_auth.php");
 
 </body>
 </html>
-
-
-

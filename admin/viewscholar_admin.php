@@ -63,7 +63,7 @@
 <?php
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
       
 //Retrieve data based on scholar
 $q = "SELECT scholar.scholar_id, scholar.scholar_image, scholar.scholar_title, scholar.scholar_descript, scholar.scholar_deadline, scholar.scholar_link FROM scholar";

@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <meta charset="utf=8">
-    <title> Welcome </title>
+    <title> Student </title>
 
      <!-- Link fo css file -->
     <link rel="stylesheet" href="student_content.css" /> 
@@ -76,34 +76,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <span class="navbar-toggler-icon"></span>
             </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="student_homepage.php">Home</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="student_profile.php">Profile</a>
+                        <a class="nav-link" aria-current="page" href="student_viewprofile.php">Profile</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">News & Events</a>
+                        <a class="nav-link" aria-current="page" href="viewnews_student.php">News & Events</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">UniKL Branches</a>
+                        <a class="nav-link" aria-current="page" href="viewbranch_student.php">UniKL Branches</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">Scholarship</a>
+                        <a class="nav-link" aria-current="page" href="viewscholar_student.php">Scholarship</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="">Academic Advisor</a>
+                        <a class="nav-link" aria-current="page" href="viewadvisor_student.php">Academic Advisor</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" href="student_logout.php">Logout</a>
+                        <a class="nav-link" aria-current="page" href="student_logout.php">Logout</a>
                         </li>
                     </ul>
 
@@ -123,6 +123,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="row">
         <div class="col-md-6 mx-auto">
             <form name="student view profile" action="student_editprofile.php" method="post">
+
+            <img class="student" src="../student/media/student.png" alt="Student Image">
 
             <input type="hidden" name="student_id" value="<?php echo $student_id; ?>" />
 
@@ -153,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <br>
 
-                <button type="submit" name="submit" class="btn btn-primary">Save Changes</button>
+                <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
         </div>
     </div>
 </div>

@@ -7,6 +7,28 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 
+.header {
+    text-align: center;
+  }
+  
+  .header img {
+    width: 100%;
+    max-width: 1350px;
+    height: auto;
+  }
+  
+  .header h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
 .cover{
     width: 900px;
     height: 400px;
@@ -16,23 +38,85 @@ body{
 .box{
     width: 800px;
     height: 400px;
-    margin-left: 100px;
+    margin-left: 150px;
     margin-right: 50px;
-    box-shadow: -1px 0 10px #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .box img{
-    width: 500px;
+    width: 400px;
     height: 200px;
     display: flex;
 }
 
-footer{
-    display: flex;
+.box h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .box a:hover {
+    background-color: #5690ce;
+  }
+
+  .container.mt-4 {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 10px double #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  h2.mb-4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .student {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+  
+
+ 
+footer {
+    background-color: #e7eaec;
+    padding: 10px;
+    font-size: 15px;
+    color: #888;
+    display: flex !;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: auto;
-}
+  }
+
+

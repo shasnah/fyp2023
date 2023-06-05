@@ -24,13 +24,9 @@
     margin-right: 10%;
   }
 
-.caption .scholar_title {
+.caption .branch_abbre {
     font-weight: bold;
     font-size: 18px;
-  }
-
-.caption .scholar_descript {
-    text-justify: inter-word;
   }
 
 main{
@@ -47,11 +43,11 @@ main{
 
 main .card{
     width: calc(33.33% - 40px); /* Adjust the width to fit three cards per row */
-    max-width: 350px;
+    max-width: 300px;
     flex: 1 0 33.33%;
     text-align: center;
-    height: 800px;
-    border: 1px solid lightgrey !important;
+    height: 600px;
+    border: 5px double lightgrey !important;
     margin: 20px;
 }
 
@@ -63,7 +59,7 @@ main .card .image{
 main .card .image img{
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
 
 }
 
@@ -75,17 +71,17 @@ main .card a{
     width: 50%;
 }
 
-main .card button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+main .card button{
     border: 2px solid black;
     padding: 0.5em;
     width: 80%;
     cursor: pointer;
+    margin-top: 1em;
     font-weight: bold;
-  }
+    position: relative;
+    margin-left: 60%;
+    margin-bottom: 10px;
+}
 
 main .card button:before{
     content: "";
@@ -118,6 +114,7 @@ main .card button:hover::before{
 main .card button:hover::after{
     width: 8%;
 }
+
 
 footer {
     background-color: #e7eaec;

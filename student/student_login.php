@@ -38,9 +38,11 @@ require('mysqli_connect.php');
                     //Redirect user to index.php
                 header("Location: student_homepage.php");
             } else {
-                echo "<div class='button'>
-                    <h3>Username/password is incorrect.</h3>
-                    <br/>Click here to <a href='student_login.php'>Login</a></div>";
+                echo "<script>
+                if (confirm('Username/password is incorrect. Click OK to login.')) {
+                    window.location.href = 'student_login.php';
+                }
+                </script>";
             }
             
     }else {

@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf=8">
-    <title> Welcome </title>
+    <title> Student </title>
 
      <!-- Link fo css file -->
     <link rel="stylesheet" href="student_viewbranch.css" /> 
@@ -27,7 +27,7 @@
             <span class="navbar-toggler-icon"></span>
             </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="student_homepage.php">Home</a>
@@ -38,19 +38,19 @@
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">News & Events</a>
+                        <a class="nav-link" aria-current="page" href="viewnews_student.php">News & Events</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">UniKL Branches</a>
+                        <a class="nav-link" aria-current="page" href="viewbranch_student.php">UniKL Branches</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Scholarship</a>
+                        <a class="nav-link" aria-current="page" href="viewscholar_student.php">Scholarship</a>
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Academic Advisor</a>
+                        <a class="nav-link" aria-current="page" href="viewadvisor_student.php">Academic Advisor</a>
                         </li>
 
                         <li class="nav-item">
@@ -67,10 +67,18 @@
     </nav>
 <!-- End of navigation menu -->
 
+<header class="header">
+
+<h2> UniKL Branches </h2>
+
+<p> This page provides detailed information about all 12 branches of UniKL. For further inquiries, please contact the respective UniKL branch directly. </p>
+
+</header>
+
 <?php
 
 require('mysqli_connect.php');
-// include("student_auth.php");
+include("student_auth.php");
 
 
 // Retrieve branches data from the database
@@ -99,7 +107,7 @@ $result = mysqli_query($dbc, $sql);
             <p class="branch_phone"> <?php echo $row["branch_phone"];     ?> </p>
         </div>
 
-        <a href="#"><button type="button">View Course</button></a>
+        <a href="viewcourse_student.php?branch_id=<?php echo $branch_id; ?>"><button type="button">View Course</button></a>
     </div>
 
     <?php

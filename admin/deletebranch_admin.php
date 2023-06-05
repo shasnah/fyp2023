@@ -52,7 +52,7 @@
 <?php
  
  require('mysqli_connect.php');
-//  include("admin_auth.php");
+ include("admin_auth.php");
  
  
  // Check for a valid branch ID, through GET or POST: 

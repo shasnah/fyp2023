@@ -2,7 +2,7 @@
 <?php 
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // initialize form fields if news_id is valid

@@ -62,7 +62,7 @@
 <?php
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
+include("admin_auth.php");
       
 //Retrieve data based on news
 $q = "SELECT news.news_id, news.news_image, news.news_title, news.news_descript, news.news_date FROM news";

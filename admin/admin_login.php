@@ -38,11 +38,13 @@ require('mysqli_connect.php');
                 session_start();
                 $_SESSION['admin_username'] = $admin_username;
                     //Redirect user to admin_dashboard.php
-                header("Location: insertnews_admin.php");
+                header("Location: admin_dashboard.php");
                 }else {
-                    echo "<div class='button'>
-                <h3>Username/password is incorrect.</h3>
-                <br/>Click here to <a href='admin_login.php'>Login</a></div>";
+                echo "<script>
+                    if (confirm('Username/password is incorrect. Click OK to login.')) {
+                        window.location.href = 'admin_login.php';
+                    }
+                </script>";
                 }  
 
     }else { ?> 

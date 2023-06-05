@@ -63,8 +63,8 @@
 <?php
 
 require('mysqli_connect.php');
-// include("admin_auth.php");
-      
+include("admin_auth.php");      
+
 //Retrieve data based on advisor
 $q = "SELECT advisor.advisor_id, advisor.advisor_fname, advisor.advisor_lname, advisor.advisor_depart, advisor.advisor_email FROM advisor";
 
