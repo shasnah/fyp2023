@@ -449,7 +449,7 @@ elseif ($maxScore == $artistic) {
     echo '<div class="result-container">';
     echo '<h2 class="header"> RIASEC Test Result</h2>';
     echo '<div class="result-message realistic">';
-    $result = '<b>A = Artistic</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Investigative people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
+    $result = '<b>A = Artistic</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Artistic people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
     echo $result;
     echo '</div>';
     echo "<br>";
@@ -469,7 +469,7 @@ elseif ($maxScore == $social) {
     echo '<div class="result-container">';
     echo '<h2 class="header"> RIASEC Test Result</h2>';
     echo '<div class="result-message realistic">';
-    $result = '<b>S = Social</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Investigative people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
+    $result = '<b>S = Social</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Social people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
     echo $result;
     echo '</div>';
     echo "<br>";
@@ -489,7 +489,7 @@ elseif ($maxScore == $enterprising) {
     echo '<div class="result-container">';
     echo '<h2 class="header"> RIASEC Test Result</h2>';
     echo '<div class="result-message realistic">';
-    $result = '<b>E = Enterprising</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Investigative people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
+    $result = '<b>E = Enterprising</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Enterprising people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
     echo $result;
     echo '</div>';
     echo "<br>";
@@ -507,7 +507,7 @@ elseif ($maxScore == $conventional) {
     echo '<div class="result-container">';
     echo '<h2 class="header"> RIASEC Test Result</h2>';
     echo '<div class="result-message realistic">';
-    $result = '<b>C = Conventional</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Investigative people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
+    $result = '<b>C = Conventional</b><br>These people like to watch, learn, analyze and solve problems. Good college majors for Conventional people are:<br>• Marine Biology<br>• Engineering<br>• Chemistry<br>• Zoology<br>• Medicine/Surgery<br>• Consumer Economics<br>• Psychology';
     echo $result;
     echo '</div>';
     echo "<br>";

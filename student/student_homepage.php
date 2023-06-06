@@ -77,7 +77,7 @@ include("student_auth.php");
 
 <h2> UniKL Course Recommedation System </h2>
 
-<p> This website is provided for specially for SPM students to discover diploma and foundation courses provided in UniKL. Students can use their SPM results to know what course suits with their exam result. </p>
+<p> This website is provided specially for SPM students to discover diploma and foundation courses provided in UniKL. Students can use their SPM results to know what course suits with their exam result. </p>
 
 </header>
 

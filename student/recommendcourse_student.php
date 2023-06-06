@@ -1,3 +1,9 @@
+
+<?php
+  include("student_auth.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,8 +113,6 @@
 </div>
 
 <?php
-
-include("student_auth.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $grades = [];
