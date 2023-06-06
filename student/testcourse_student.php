@@ -74,7 +74,10 @@
 <!-- End of navigation menu -->
 
 <div class="container">
+<div class="logo-heading">
+    <img src="https://workforce.org/wp-content/uploads/2020/08/RIASEC-Hexagon-5-1024x1024.png" alt="logo">
     <h2>RIASEC Test</h2>
+</div>
     <p>The Holland Occupational Themes theory is centered around career and vocational choices, categorizing individuals into six distinct occupational categories based on their suitability. This classification is commonly referred to as RIASEC, representing the initial letters of each category.</p>
     <p>This test is intended for educational and entertainment purposes only. It should not be considered as psychological advice, and it does not provide any guarantee of accuracy or suitability for any specific purpose.</p>
     <form action="testresult_student.php" method="post" onsubmit="return validateForm()">

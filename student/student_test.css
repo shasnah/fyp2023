@@ -7,12 +7,23 @@
     color: black;
 }
 
-h2 {
-    color: #333;
-    font-weight: bold !important;
-    margin-top: 30px !important;
-    margin-bottom: 10px !important;
-  }
+.logo-heading {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.logo-heading img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.logo-heading h2 {
+  color: #333;
+  font-weight: bold !important;
+}
 
   p {
     color: #666;

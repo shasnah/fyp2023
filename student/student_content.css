@@ -37,10 +37,11 @@ body{
     margin-top: 50px;
     display: flex;
 }
+
 .box{
     width: 800px;
     height: 400px;
-    margin-left: 150px;
+    margin-left: 170px;
     margin-right: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     align-items: center;
